@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	 <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon.png') }}" type="image/x-icon">
+	<title>{{ title }}</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" style="font-size: 120%; font-weight: bold;">
+	  <div class="container">
+	    <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='img/icon.png') }}" width="55px" alt=""></a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarCollapse">
+	      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+	        <li class="nav-item">
+	          <a class="nav-link" href="/map/">Карта</a>
+	        </li>
+	        <li>
+	          <a class="nav-link" href="/table/">Анкеты</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	
+	 {% block body %}{% endblock %}
+
+	<nav class="navbar navbar-expand-md navbar-dark fixed-bottom bg-dark">
+	</nav>
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
+
+
+

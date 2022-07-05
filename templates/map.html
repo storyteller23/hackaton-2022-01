@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f8e1d6a7c80d49849a0c8ad24ccd8896 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f8e1d6a7c80d49849a0c8ad24ccd8896" ></div>
+        
+</body>
+<script>    
+    
+            var map_f8e1d6a7c80d49849a0c8ad24ccd8896 = L.map(
+                "map_f8e1d6a7c80d49849a0c8ad24ccd8896",
+                {
+                    center: [51.1605227, 71.4703558],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    defaultZoomStart: 35,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_76f32db6d246410b8ccd9dc65f7fb750 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f8e1d6a7c80d49849a0c8ad24ccd8896);
+        
+    
+            var marker_877eaa6806234651ae06bc3c146c5559 = L.marker(
+                [51.1641109, 71.4220542],
+                {}
+            ).addTo(map_f8e1d6a7c80d49849a0c8ad24ccd8896);
+        
+    
+            var icon_9d1ff7140ecf4f21ba08915ad6732f2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_877eaa6806234651ae06bc3c146c5559.setIcon(icon_9d1ff7140ecf4f21ba08915ad6732f2c);
+        
+    
+        var popup_553dab3384b1457c94ee3453810ecc0a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4923d73c41b640e88b0b514f9c546384 = $(`<div id="html_4923d73c41b640e88b0b514f9c546384" style="width: 100.0%; height: 100.0%;"><b>ИИН:</b> 111222333<br>                       <b>Фамилия:</b> Иванов<br>                       <b>Имя:</b> Иван<br>                       <b>Адрес:</b>Кенесары 32<br>                       <b>Площадь(кв.м.):</b>50<br>                       <b>Кадастровый номер:</b>12351525<br>                       <a href="/table/update/3"                       target="_blank">Изменить<a></div>`)[0];
+            popup_553dab3384b1457c94ee3453810ecc0a.setContent(html_4923d73c41b640e88b0b514f9c546384);
+        
+
+        marker_877eaa6806234651ae06bc3c146c5559.bindPopup(popup_553dab3384b1457c94ee3453810ecc0a)
+        ;
+
+        
+    
+    
+            marker_877eaa6806234651ae06bc3c146c5559.bindTooltip(
+                `<div>
+                     Иван Иванов
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fa78cf0bd54e483c82be8e5662aa9d17 = L.marker(
+                [51.1176824, 71.4121775],
+                {}
+            ).addTo(map_f8e1d6a7c80d49849a0c8ad24ccd8896);
+        
+    
+            var icon_a267e3502f6542fa85e44afac7eab082 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fa78cf0bd54e483c82be8e5662aa9d17.setIcon(icon_a267e3502f6542fa85e44afac7eab082);
+        
+    
+        var popup_420b585270a54d6eab84e69376da8f63 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78cb6ea050944ce6807717c395c51adc = $(`<div id="html_78cb6ea050944ce6807717c395c51adc" style="width: 100.0%; height: 100.0%;"><b>ИИН:</b> 23153443153<br>                       <b>Фамилия:</b> Смирнов<br>                       <b>Имя:</b> Алексей<br>                       <b>Адрес:</b>Алматы 2<br>                       <b>Площадь(кв.м.):</b>30<br>                       <b>Кадастровый номер:</b>5849038590<br>                       <a href="/table/update/4"                       target="_blank">Изменить<a></div>`)[0];
+            popup_420b585270a54d6eab84e69376da8f63.setContent(html_78cb6ea050944ce6807717c395c51adc);
+        
+
+        marker_fa78cf0bd54e483c82be8e5662aa9d17.bindPopup(popup_420b585270a54d6eab84e69376da8f63)
+        ;
+
+        
+    
+    
+            marker_fa78cf0bd54e483c82be8e5662aa9d17.bindTooltip(
+                `<div>
+                     Алексей Смирнов
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d5aef95776a4eb8a9d197a61384758f = L.marker(
+                [51.1288966, 71.4313095],
+                {}
+            ).addTo(map_f8e1d6a7c80d49849a0c8ad24ccd8896);
+        
+    
+            var icon_5294f0e3576d4637a95048a017332997 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1d5aef95776a4eb8a9d197a61384758f.setIcon(icon_5294f0e3576d4637a95048a017332997);
+        
+    
+        var popup_ca521dc02e37426197f2d6e978ac4d03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7333a0c360e040b796c08fced3ca77ff = $(`<div id="html_7333a0c360e040b796c08fced3ca77ff" style="width: 100.0%; height: 100.0%;"><b>ИИН:</b> 4859483932<br>                       <b>Фамилия:</b> Смолов<br>                       <b>Имя:</b> Вадим<br>                       <b>Адрес:</b>Динмухамеда Кунаева 14<br>                       <b>Площадь(кв.м.):</b>45<br>                       <b>Кадастровый номер:</b>12341561<br>                       <a href="/table/update/5"                       target="_blank">Изменить<a></div>`)[0];
+            popup_ca521dc02e37426197f2d6e978ac4d03.setContent(html_7333a0c360e040b796c08fced3ca77ff);
+        
+
+        marker_1d5aef95776a4eb8a9d197a61384758f.bindPopup(popup_ca521dc02e37426197f2d6e978ac4d03)
+        ;
+
+        
+    
+    
+            marker_1d5aef95776a4eb8a9d197a61384758f.bindTooltip(
+                `<div>
+                     Вадим Смолов
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8ecacf1858604766952f8830ea561e0c = L.marker(
+                [51.1372878, 71.4117273],
+                {}
+            ).addTo(map_f8e1d6a7c80d49849a0c8ad24ccd8896);
+        
+    
+            var icon_992f5b50d9f3452bbf5edd84f8033888 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8ecacf1858604766952f8830ea561e0c.setIcon(icon_992f5b50d9f3452bbf5edd84f8033888);
+        
+    
+        var popup_5a98c55f1dbb4bb6a4e639a27af0b802 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9656f5c80a464889a5311e5b1c8ec3ac = $(`<div id="html_9656f5c80a464889a5311e5b1c8ec3ac" style="width: 100.0%; height: 100.0%;"><b>ИИН:</b> 2315364245<br>                       <b>Фамилия:</b> Ахметов<br>                       <b>Имя:</b> Алдияр<br>                       <b>Адрес:</b>Сарайшык 5<br>                       <b>Площадь(кв.м.):</b>45<br>                       <b>Кадастровый номер:</b>23151134<br>                       <a href="/table/update/6"                       target="_blank">Изменить<a></div>`)[0];
+            popup_5a98c55f1dbb4bb6a4e639a27af0b802.setContent(html_9656f5c80a464889a5311e5b1c8ec3ac);
+        
+
+        marker_8ecacf1858604766952f8830ea561e0c.bindPopup(popup_5a98c55f1dbb4bb6a4e639a27af0b802)
+        ;
+
+        
+    
+    
+            marker_8ecacf1858604766952f8830ea561e0c.bindTooltip(
+                `<div>
+                     Алдияр Ахметов
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c58efac418744cfa83af684dbe8d6af7 = L.marker(
+                [51.1603308, 71.4341596],
+                {}
+            ).addTo(map_f8e1d6a7c80d49849a0c8ad24ccd8896);
+        
+    
+            var icon_aecbefd79da7417e885a4dd17d4311d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c58efac418744cfa83af684dbe8d6af7.setIcon(icon_aecbefd79da7417e885a4dd17d4311d8);
+        
+    
+        var popup_916189de1e3b4637a72eca4ecf192e87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66bd69fa247846edb17a3df939eaf0de = $(`<div id="html_66bd69fa247846edb17a3df939eaf0de" style="width: 100.0%; height: 100.0%;"><b>ИИН:</b> 4839022332<br>                       <b>Фамилия:</b> Бакаев<br>                       <b>Имя:</b> Данияр<br>                       <b>Адрес:</b>Иманбаевой 2<br>                       <b>Площадь(кв.м.):</b>30<br>                       <b>Кадастровый номер:</b>132451512<br>                       <a href="/table/update/7"                       target="_blank">Изменить<a></div>`)[0];
+            popup_916189de1e3b4637a72eca4ecf192e87.setContent(html_66bd69fa247846edb17a3df939eaf0de);
+        
+
+        marker_c58efac418744cfa83af684dbe8d6af7.bindPopup(popup_916189de1e3b4637a72eca4ecf192e87)
+        ;
+
+        
+    
+    
+            marker_c58efac418744cfa83af684dbe8d6af7.bindTooltip(
+                `<div>
+                     Данияр Бакаев
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

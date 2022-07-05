@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+	<form method="POST" action="">
+		<h2>Географические данные</h2>
+		<div class="form-group">
+			<label for="last_name">Долгота:</label>
+			<input type="text" class="form-control" name="longitude" placeholder="Долгота" value="{{ subject[-3] }}" required>
+		</div>
+		<div class="form-group">
+			<label for="first_name">Широта:</label>
+			<input type="text" class="form-control" name="latitude" placeholder="Широта" value="{{ subject[-2] }}" required>
+		</div>
+		<div class="form-group">
+			<label for="first_name">Цвет маркера на карте:</label>
+			<select class="form-select" name="mark_color">
+			  <option value="blue">Синий</option>
+			  <option value="green">Зеленый</option>
+			  <option value="red">Красный</option>
+			</select>
+		</div>
+		<h2>Паспортные данные</h2>
+		<div class="form-group">
+			<label for="last_name">Фамилия:</label>
+			<input type="text" class="form-control" name="last_name" placeholder="Фамилия" value="{{ subject[2] }}" required>
+		</div>
+
+		<div class="form-group">
+			<label for="first_name">Имя:</label>
+			<input type="text" class="form-control" name="first_name" placeholder="Имя" value="{{ subject[1] }}" required>
+		</div>
+
+		<div class="form_group">
+			<label for="patronymic">Отчество:</label>
+			<input type="text" class="form-control" name="patronymic" placeholder="Отчество" value="{{ subject[3] }}">
+		</div>
+
+		<div class="form-group">
+			<label for="first_name">ИИН:</label>
+			<input type="text" class="form-control" name="iin" placeholder="ИИН" value="{{ subject[4] }}" required>
+		</div>
+
+		<h2>Адресные данные</h2>
+		<div class="form-group">
+			<label for="city">Город:</label>
+			<input type="text" class="form-control" name="city" placeholder="Город" value="{{ subject[5] }}" required>
+		</div>
+
+		<div class="form-group">
+			<label for="street">Улица:</label>
+			<input type="text" class="form-control" name="street" placeholder="Улица" value="{{ subject[6] }}" required>
+		</div>
+
+		<div class="form-group">
+			<label for="home_number">Номер дома:</label>
+			<input type="text" class="form-control" name="home_number" placeholder="Номер дома" value="{{ subject[7] }}"required>
+		</div>
+
+		<div class="form-group">
+			<label for="apartment_number">Номер квартиры(если есть):</label>
+			<input type="text" class="form-control" name="apartment_number" placeholder="Номер квартиры" value="{{ subject[8] }}">
+		</div>
+		
+		<h2>Дополнительно</h2>
+		<div class="form-group">
+			<label for="cadastral_number">Кадастровый номер:</label>
+			<input type="text" class="form-control" name="cadastral_number" placeholder="Кадастровый номер" value="{{ subject[9] }}">
+		</div>
+
+		<div class="form-group">
+			<label for="area_size">Площадь(кв.м.):</label>
+			<input type="text" class="form-control" name="area_size" placeholder="Площадь" value="{{ subject[10] }}">
+		</div>
+
+		<div class="form-group">
+			<label for="notes">Дополнительно:</label>
+			<input type="text" class="form-control" name="notes" placeholder="Дополнительно" value="{{ subject[11] }}">
+		</div>
+		
+
+		<button type="submit" class="btn btn-success">Изменить</button>
+	</form>
+	<br>
+	<br>
+	<br>
+</div>
+{% endblock %}

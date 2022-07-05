@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+		<h2 align="center">Анкеты</h2>
+	<a href="/add_subject/">
+		<button class="btn btn-primary">Создать анкету</button>
+	</a>
+		<div class="table-responsive">
+		<table class="table table-striped table-hover">
+			<tr>
+				<th>№</th>
+				<th>Ф.И.О. владельца анкеты</th>
+				<th>Кадастровый номер</th>
+				<th>Площадь земельного участка(км.м.)</th>
+				<th>Адрес</th>
+				<th></th>
+			</tr>
+		{% for n, subject in subjects %}
+			<tr> 
+				<td>{{ n }}</td>
+				<td>{{ subject[0] }}</td>
+				<td>{{ subject[1] }}</td>
+				<td>{{ subject[2] }}</td>
+				<td>{{ subject[3] }}</td>
+				
+				<td>
+					<a class="btn btn-warning" href="/table/update/{{ subject[4] }}">Изменить</a>
+					<a class="btn btn-danger" href="/table/delete/{{ subject[4] }}" onclick="return confirm('Удалить анкету?')">Удалить</a>
+				</td>
+			</tr>
+		{% endfor %}
+		</table>
+		<h3>Всего анкет: {{ count }}</h3>
+	</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+{% endblock %}
